@@ -7,7 +7,4 @@ public class Helper {
         String allowedStrings = "mrp";
         return input.matches("[" + allowedStrings + "]+");
     }
-    public boolean checkIfOuOfBounds(int px, int py){
-        return false;
-    }
 }

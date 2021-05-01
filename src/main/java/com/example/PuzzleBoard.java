@@ -61,7 +61,6 @@ public class PuzzleBoard {
                     break;
                 case 'p':
                     printSquare(puzzleBoard);
-                    printBoard(puzzleBoard);
                     break;
                 default:
                     break;

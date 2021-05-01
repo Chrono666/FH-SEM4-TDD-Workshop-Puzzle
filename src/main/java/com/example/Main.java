@@ -21,7 +21,11 @@ public class Main {
         String input = scanner.next();
 
         if (helper.checkUserInput(input)) {
-            board.gameLogic(input, puzzleBoard);
+            try {
+                board.gameLogic(input, puzzleBoard);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Please check your input again it looks like you moved out of the puzzle bounds");
+            }
         }
     }
 
