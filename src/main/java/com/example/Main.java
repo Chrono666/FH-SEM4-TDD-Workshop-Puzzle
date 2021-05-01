@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         PuzzleBoard board = new PuzzleBoard();
-        Utility utility = new Utility();
+        Helper helper = new Helper();
         Scanner scanner = new Scanner(System.in);
 
 
@@ -16,11 +16,11 @@ public class Main {
 
         System.out.println("The following moves are possible: m - move, r - rotate 90° to the right, p - print on the current position");
         System.out.println("Please enter your movements in one line and without spaces: ");
-        String square = "mrmpmpmpmprrrmpmpmprrrmpmpmprrrmpmp";
-        String input = square;
-//        String input = scanner.next();
+//        String square = "mrmpmpmpmprrrmpmpmprrrmpmpmprrrmpmp";
+//        String cross = "mmprmprmpmprrmmmpmpmprrmmmrrrmpmpmpmp";
+        String input = scanner.next();
 
-        if (utility.checkUserInput(input) && !utility.checkIfOuOfBounds()) {
+        if (helper.checkUserInput(input)) {
             board.gameLogic(input, puzzleBoard);
         }
     }

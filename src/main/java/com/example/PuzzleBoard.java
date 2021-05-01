@@ -27,13 +27,13 @@ public class PuzzleBoard {
 
     private void move() {
         if (r == 0) {
-            py++;
-        } else if (r == 1) {
             px++;
+        } else if (r == 1) {
+            py++;
         } else if (r == 2) {
-            py--;
-        } else if (r == 3) {
             px--;
+        } else if (r == 3) {
+            py--;
         }
     }
 
@@ -46,7 +46,7 @@ public class PuzzleBoard {
     }
 
     private void printSquare(char[][] puzzleBoard) {
-        puzzleBoard[px][py] = 'X';
+        puzzleBoard[py][px] = 'X';
     }
 
 
@@ -61,6 +61,7 @@ public class PuzzleBoard {
                     break;
                 case 'p':
                     printSquare(puzzleBoard);
+                    printBoard(puzzleBoard);
                     break;
                 default:
                     break;
