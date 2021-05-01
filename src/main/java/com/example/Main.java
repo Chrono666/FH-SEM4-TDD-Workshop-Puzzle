@@ -18,7 +18,8 @@ public class Main {
         char[][] puzzleBoard = board.initBoard(row, col);
         System.out.println("The following moves are possible: m - move, r - rotate 90° to the right, p - print on the current position");
         System.out.println("Please enter your movements in one line and without spaces: ");
-        String input = scanner.next();
+//        String input = scanner.next();
+        String input = square;
         board.gameLogic(input, puzzleBoard);
     }
 
