@@ -2,9 +2,9 @@ package com.example;
 
 
 public class PuzzleBoard {
-    public int px = 0;
-    public int py = 0;
-    public int r = 0;
+    private int px = 0;
+    private int py = 0;
+    private int r = 0;
 
     public char[][] initBoard(int row, int col) {
         char[][] board = new char[row][col];
@@ -37,7 +37,6 @@ public class PuzzleBoard {
         }
     }
 
-
     private void rotateRight() {
         r++;
         if (r >= 4) {
@@ -49,8 +48,7 @@ public class PuzzleBoard {
         puzzleBoard[py][px] = 'X';
     }
 
-
-    public void gameLogic(String input, char[][] puzzleBoard) {
+    public char[][] gameLogic(String input, char[][] puzzleBoard) {
         for (int i = 0; i < input.length(); i++) {
             switch (input.charAt(i)) {
                 case 'm':
@@ -66,6 +64,7 @@ public class PuzzleBoard {
                     break;
             }
         }
-        printBoard(puzzleBoard);
+
+        return puzzleBoard;
     }
 }

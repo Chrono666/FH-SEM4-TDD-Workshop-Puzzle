@@ -22,11 +22,10 @@ public class Main {
 
         if (helper.checkUserInput(input)) {
             try {
-                board.gameLogic(input, puzzleBoard);
+                board.printBoard(board.gameLogic(input, puzzleBoard));
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Please check your input again it looks like you moved out of the puzzle bounds");
             }
         }
     }
-
 }
